@@ -1,0 +1,98 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <DockPanel>
+                <Menu DockPanel.Dock="Top" VerticalContentAlignment="Top">
+                    <MenuItem Header ="_Файл" >
+                        <MenuItem Header ="_Открыть" Click="MenuItem_Click"/>
+                        <MenuItem Header ="_Сохранить" Click="MenuItem_Click_1"/>
+                        <Separator/>
+                        <MenuItem Header ="_Закрыть" Click="MenuItem_Click_2"/>
+                    </MenuItem>
+                </Menu>
+            </DockPanel>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+
+                    <ToolBarTray>
+                <ToolBar >
+                    <ComboBox Width="200" SelectedIndex="0" VerticalAlignment="Center" Margin="5" Padding="5" IsEditable="True" SelectionChanged="ComboBox_SelectionChanged">
+                        <TextBlock>Arial</TextBlock>
+                        <TextBlock>Times New Roman</TextBlock>
+                        <TextBlock>IOSCPEUR</TextBlock>
+                    </ComboBox>
+                </ToolBar>
+                <ToolBar Margin="5" Padding="5" VerticalAlignment="Center">
+                    <ComboBox Width="50" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged_1">
+                        <TextBlock Text="10"/>
+                        <TextBlock Text="12"/>
+                        <TextBlock Text="14"/>
+                    </ComboBox>
+                </ToolBar>
+                <ToolBar Margin="5" Padding="5">
+
+                    <ToggleButton Width="40" Height="40"  Click="ToggleButton_Click" IsEnabled="True">
+                        <Image Source="\Data\bold1.png"   />
+                    </ToggleButton>
+                    <Separator/>
+                    <ToggleButton Width="40" Height="40" IsEnabled="True" Click="ToggleButton_Click_1">
+                        <Image Source="\Data\Italic3.png"/>
+                    </ToggleButton>
+                    <Separator/>
+                    <ToggleButton Width="40" Height="40" IsEnabled="True" Click="ToggleButton_Click_2">
+                        <Image Source="\Data\underline1.png"/>
+                    </ToggleButton>
+                    <Separator/>
+
+                </ToolBar>
+
+                <ToolBar Margin="5" Padding="5">
+                    <StackPanel>
+                        <RadioButton Content="Чёрный" IsChecked="True" Click="RadioButton_Click"/>
+                        <RadioButton Content="Красный" IsChecked="False" Click="RadioButton_Click_1"/>
+
+                    </StackPanel>
+                </ToolBar>
+            </ToolBarTray>
+            
+        </Grid>
+        <Grid Grid.Row="2"  >
+            <TextBox x:Name="textBox" Margin="10" Padding="5" BorderBrush="#FF2C57D8">
+
+            </TextBox>
+
+        </Grid>
+
+    </Grid>
+</Window>
+
+<!--<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="auto" Width="auto" Closing="Window_Closing">
+    
+    <Grid>
+        <Image Source="Data/1.jpg"/>
+        
+    </Grid>
+</Window> -->
